@@ -21,7 +21,7 @@ RESET=`tput sgr0`
 function display_cold_banner () {
     figlet -f lean -w 1000 "$SCRIPT_NAME" > "${MD_DEFAULT['tmp-file']}"
     clear; echo -n "${RED}`cat ${MD_DEFAULT['tmp-file']}`${RESET}
-" && rm $TMP_FILE &> /dev/null
+" && rm ${MD_DEFAULT['tmp-file']} &> /dev/null
     return 0
 }
 
