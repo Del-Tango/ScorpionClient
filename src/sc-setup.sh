@@ -32,7 +32,7 @@ function load_project_config () {
 
 function load_project_cargo_scripts () {
     if [ ${#SC_CARGO[@]} -eq 0 ]; then
-        warning_msg "No cargo scripts found docked to $EY_SCRIPT_NAME."
+        warning_msg "No cargo scripts found docked to $SC_SCRIPT_NAME."
         return 1
     fi
     for cargo in ${!SC_CARGO[@]}; do
